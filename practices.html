@@ -1,0 +1,45 @@
+<html>
+
+<body>
+    <script>
+        function callmethod() {
+            for (var line = "#"; line.length < 8; line += "#")
+                console.log(line);
+        }
+
+    </script>
+<script>
+    //FizzBuzz
+    for (i = 1; i <= 100; i++) {
+        var output = "";
+        if (i % 3 == 0) {
+            output = "Fizz";
+        }
+        if (i % 5 == 0) {
+            output = "Buzz";
+        }
+        console.log(output || i);
+    }
+    //ChessBoard
+    var size = 8;
+    var board = "";
+    for (y = 0; y < size; y++) {
+        for (x = 0; x < size; x++) {
+            if ((y + x) % 2 == 0) {
+                board += " ";
+            }
+            else {
+                board += "#";
+            }
+        }
+        board += "\n";
+    }
+    console.log(board);
+</script>
+<p>Click "<i>Load samples</i>" to view and edit more JS samples.<br>
+    <br> Labyrinth generated with JavaScript:<br><br></p>
+<input type="button" value="click here" onclick="callmethod()"/>
+
+</body>
+
+</html>
